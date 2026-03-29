@@ -498,6 +498,37 @@
             to { box-shadow: 0 0 35px rgba(0, 240, 255, 0.6); border-color: rgba(0, 240, 255, 0.8); }
         }
 
+        .project-thumbnail {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--glass-border);
+            opacity: 0.85;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-thumbnail {
+            transform: scale(1.03);
+            opacity: 1;
+        }
+
+        .project-features-grid {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 0.5rem; 
+            margin-bottom: 1.5rem; 
+            font-size: 0.85rem; 
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            .project-features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .project-content {
             position: relative;
             z-index: 1;
@@ -1083,6 +1114,39 @@
                             </div>
                             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                                 <a href="https://sijanlist.pro.bd" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card featured-project" style="border-color: rgba(0, 240, 255, 0.5);">
+                        <div class="project-content">
+                            <img src="fzs_sports.png" alt="FZS Sports Platform" class="project-thumbnail">
+                            <div class="project-title">
+                                FZS Sports
+                                <span class="project-status">Featured</span>
+                                <span class="project-status" style="background: rgba(157, 0, 255, 0.1); color: var(--accent-purple); border-color: rgba(157, 0, 255, 0.3);">Newest</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.8rem; font-family: var(--font-mono); font-weight: 700;">Sports Social Platform</div>
+                            <p>FZS Sports is a modern sports social platform where players, teams, and fans can connect in one place. It includes player profiles, team management, tournaments, community posts, and a dynamic award system. The platform focuses on engagement, real-time interaction, and a visually rich user experience.</p>
+                            
+                            <div class="project-features-grid">
+                                <div><i class="fas fa-id-card" style="color: var(--accent-cyan); margin-right: 8px;"></i> Player Stats & Profiles</div>
+                                <div><i class="fas fa-trophy" style="color: var(--accent-cyan); margin-right: 8px;"></i> Tournament Management</div>
+                                <div><i class="fas fa-users" style="color: var(--accent-cyan); margin-right: 8px;"></i> Community Action Posts</div>
+                                <div><i class="fas fa-user-shield" style="color: var(--accent-cyan); margin-right: 8px;"></i> Role-based Admin Panel</div>
+                                <div><i class="fas fa-medal" style="color: var(--accent-cyan); margin-right: 8px;"></i> Smart Award System</div>
+                                <div><i class="fas fa-bolt" style="color: var(--accent-cyan); margin-right: 8px;"></i> Real-time Interaction</div>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Supabase</span>
+                            </div>
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="https://fzssports.indevs.in" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
