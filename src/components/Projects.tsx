@@ -1,27 +1,33 @@
 "use client";
 
+import Image from "next/image";
+
 const projects = [
   {
-    title: "FZS Sports Platform",
-    status: "Live",
-    description: "A comprehensive sports platform built with modern web technologies. Features real-time updates, user dashboards, and interactive elements.",
-    image: "/fzs_sports.png",
-    tags: ["React", "Node.js", "MongoDB"],
+    title: "SijanList",
+    status: "Active",
+    description: "A modern utility platform and browser extension for efficient digital content management. Features real-time sync and structured backend.",
+    tags: ["JavaScript", "Supabase", "Extension APIs"],
+    featured: true,
+  },
+  {
+    title: "FZS Sports",
+    status: "Newest",
+    description: "A comprehensive sports social platform with player stats, tournament management, and real-time interaction.",
+    tags: ["React", "PHP", "Supabase"],
     featured: true,
   },
   {
     title: "RexiO AI Companion",
     status: "Active",
-    description: "Bangladesh-local AI companion with multi-agent system. Features voice interaction, natural language processing, and personalized responses.",
-    image: "/preview.png",
+    description: "Bangladesh-local AI companion with multi-agent system. Features voice interaction and personalized neural memory.",
     tags: ["AI", "Python", "NLP"],
     featured: false,
   },
   {
-    title: "Portfolio Website",
-    status: "Live",
-    description: "Personal portfolio website showcasing skills, projects, and experience. Built with modern web technologies and optimized for performance.",
-    image: "/sijan2.png",
+    title: "Spritex Platform",
+    status: "Terminated",
+    description: "Advanced digital platform with futuristic UI, focused on high-performance tools and services.",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     featured: false,
   },
@@ -30,14 +36,13 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects">
-      <h2 className="section-title">Featured Projects</h2>
+      <h2 className="section-title">Notable Projects</h2>
       <div className="projects-grid">
         {projects.map((project) => (
           <div
             key={project.title}
             className={`project-card ${project.featured ? "featured-project" : ""}`}
           >
-            <img src={project.image} alt={project.title} className="project-thumbnail" />
             <div className="project-content">
               <h3 className="project-title">
                 {project.title}
@@ -51,6 +56,14 @@ export default function Projects() {
                   <span key={tag} className="tech-tag">{tag}</span>
                 ))}
               </div>
+              {project.title === "FZS Sports" && (
+                <div className="project-features-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", fontSize: "0.75rem", color: "var(--text-muted)", marginTop: "1rem" }}>
+                  <div><i className="fas fa-id-card" style={{ color: "var(--accent-cyan)", marginRight: "8px" }} /> Player Stats</div>
+                  <div><i className="fas fa-trophy" style={{ color: "var(--accent-cyan)", marginRight: "8px" }} /> Tournaments</div>
+                  <div><i className="fas fa-users" style={{ color: "var(--accent-cyan)", marginRight: "8px" }} /> Community</div>
+                  <div><i className="fas fa-bolt" style={{ color: "var(--accent-cyan)", marginRight: "8px" }} /> Real-time</div>
+                </div>
+              )}
             </div>
           </div>
         ))}

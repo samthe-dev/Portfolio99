@@ -6,26 +6,19 @@ const skillCategories = [
     icon: "fa-desktop",
     skills: [
       { name: "HTML & CSS3", width: "95%" },
-      { name: "JavaScript / TypeScript", width: "90%" },
+      { name: "JavaScript / ES6+", width: "90%" },
       { name: "React / Next.js", width: "88%" },
+      { name: "TailwindCSS / Framer Motion", width: "90%" },
     ],
   },
   {
-    title: "Backend & Tools",
-    icon: "fa-server",
+    title: "Cybersecurity & Tools",
+    icon: "fa-shield-halved",
     skills: [
-      { name: "Node.js", width: "85%" },
-      { name: "Python", width: "80%" },
-      { name: "Git & GitHub", width: "92%" },
-    ],
-  },
-  {
-    title: "Design & Other",
-    icon: "fa-palette",
-    skills: [
-      { name: "UI/UX Design", width: "78%" },
-      { name: "Cybersecurity Basics", width: "75%" },
-      { name: "AI/ML Tools", width: "82%" },
+      { name: "Network Security", width: "80%" },
+      { name: "Linux / Terminal", width: "85%" },
+      { name: "AI Prompt Engineering", width: "95%" },
+      { name: "Git & Version Control", width: "88%" },
     ],
   },
 ];

@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const navLinks = [
-  { href: "#about", label: "Article", icon: "fa-user" },
+  { href: "#about", label: "Biography", icon: "fa-user" },
   { href: "#skills", label: "Skills", icon: "fa-code" },
   { href: "#projects", label: "Projects", icon: "fa-folder-open" },
-  { href: "#gallery", label: "Gallery", icon: "fa-images" },
+  { href: "#timeline", label: "Timeline", icon: "fa-timeline" },
 ];
 
 export default function Navigation() {

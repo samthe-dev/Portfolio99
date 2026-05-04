@@ -15,22 +15,22 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mohammad Sijan | Web Developer & Cybersecurity Expert",
-  description: "Mohammad Sijan is a Bangladeshi web developer, cybersecurity enthusiast, and digital creator specializing in modern AI-powered web applications.",
-  keywords: ["Mohammad Sijan", "Sijan Pro", "Web Developer Bangladesh", "Cybersecurity Expert", "AI Developer", "Portfolio", "Spritex"],
+  title: "Mohammad Sijan | AI Specialist & Full-Stack Developer",
+  description: "Mohammad Sijan is a Bangladeshi AI Architect and digital creator specializing in building agentic AI platforms like RexiO and futuristic web applications.",
+  keywords: ["Mohammad Sijan", "RexiO AI", "AI Specialist", "AI Developer Bangladesh", "AI Architect", "Agentic UIs", "Spritex"],
   authors: [{ name: "Mohammad Sijan" }],
   creator: "Mohammad Sijan",
   openGraph: {
     type: "website",
-    title: "Mohammad Sijan | Digital Creator & Developer",
-    description: "Explore the official portfolio and digital encyclopedia of Mohammad Sijan.",
+    title: "Mohammad Sijan | AI Innovation Lead",
+    description: "Building the next generation of AI-powered digital companions and agentic workflows.",
     url: "https://sijan.pro.bd/",
     images: ["/preview.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohammad Sijan | Digital Creator & Developer",
-    description: "Explore the official portfolio and digital encyclopedia of Mohammad Sijan.",
+    title: "Mohammad Sijan | AI Architect",
+    description: "Exploring the intersection of AI, agentic UIs, and premium web development.",
     images: ["/preview.png"],
   },
   robots: "index, follow",
@@ -38,6 +38,8 @@ export const metadata: Metadata = {
     canonical: "https://sijan.pro.bd/",
   },
 };
+
+import SmoothScroll from "@/components/SmoothScroll";
 
 export default function RootLayout({
   children,
@@ -51,8 +53,36 @@ export default function RootLayout({
         <meta name="theme-color" content="#0a0a0a" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Mohammad Sijan",
+              "url": "https://sijan.pro.bd/",
+              "image": "https://sijan.pro.bd/preview.png",
+              "jobTitle": "AI Specialist & Full-Stack Developer",
+              "homeLocation": {
+                "@type": "Place",
+                "name": "Bangladesh"
+              },
+              "knowsAbout": [
+                "Artificial Intelligence",
+                "Agentic Workflows",
+                "RexiO AI",
+                "Full-Stack Development",
+                "Cybersecurity"
+              ]
+            })
+          }}
+        />
       </head>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   );
 }
