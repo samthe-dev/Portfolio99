@@ -2,7 +2,7 @@
 
 const contacts = [
   { icon: "fas fa-envelope", label: "Email", value: "contact@sijan.pro.bd", href: "mailto:contact@sijan.pro.bd" },
-  { icon: "fab fa-github", label: "GitHub", value: "Seizmann", href: "https://github.com/SijanPro" },
+  { icon: "fab fa-github", label: "GitHub", value: "Seizmann", href: "https://github.com/Seizmann" },
   { icon: "fab fa-facebook", label: "Facebook", value: "FakeSijan", href: "https://facebook.com/FakeSijan" },
   { icon: "fab fa-instagram", label: "Instagram", value: "@seiz_1_e", href: "https://instagram.com/seiz_1_e" },
 ];
