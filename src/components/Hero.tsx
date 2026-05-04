@@ -10,7 +10,7 @@ export default function Hero() {
         <h1>Mohammad Sijan</h1>
         <p className="lead-paragraph">
           <strong>Mohammad Sijan</strong> is a Bangladeshi AI Architect, full-stack developer, 
-          and the creator of **RexiO**. He specializes in building autonomous AI agents, agentic workflows, 
+          and the creator of <strong>RexiO</strong>. He specializes in building autonomous AI agents, agentic workflows, 
           and premium digital experiences that push the boundaries of human-AI interaction.
         </p>
         <div className="hero-actions">
