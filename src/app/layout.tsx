@@ -37,6 +37,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://sijan.pro.bd/",
   },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 import SmoothScroll from "@/components/SmoothScroll";
