@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -10,6 +14,8 @@ import Timeline from "@/components/Timeline";
 import Terminal from "@/components/Terminal";
 
 export default function Home() {
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+
   return (
     <>
       <Navigation />
@@ -18,7 +24,7 @@ export default function Home() {
           <Hero />
           <About />
           <Skills />
-          <Projects />
+          <Projects onSelectProject={setSelectedProject} />
           <Timeline />
           <Contact />
           <Footer />
@@ -26,6 +32,40 @@ export default function Home() {
         <Sidebar />
       </div>
       <Terminal />
+
+      {selectedProject && (
+        <div className="modal-overlay active" onClick={() => setSelectedProject(null)}>
+          <div 
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="modal-header">
+              <h3>{selectedProject.title}</h3>
+              <button className="modal-close" onClick={() => setSelectedProject(null)}>&times;</button>
+            </div>
+            <div className="modal-body">
+              <p className="modal-desc">{selectedProject.details || selectedProject.description}</p>
+              {selectedProject.features && (
+                <div className="modal-features">
+                  <h4>Core Features:</h4>
+                  <ul>
+                    {selectedProject.features.map((f: string) => (
+                      <li key={f}><i className="fas fa-check-circle" /> {f}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              <div className="modal-footer">
+                {selectedProject.link && (
+                  <a href={selectedProject.link} target="_blank" className="btn btn-primary">
+                    Launch Platform <i className="fas fa-rocket" />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

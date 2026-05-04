@@ -21,6 +21,26 @@ const skillCategories = [
       { name: "Git & Version Control", width: "88%" },
     ],
   },
+  {
+    title: "Backend & Mobile",
+    icon: "fa-server",
+    skills: [
+      { name: "Java (Android & Enterprise)", width: "85%" },
+      { name: "Kotlin / Mobile Dev", width: "82%" },
+      { name: "Node.js / API Design", width: "88%" },
+      { name: "Database Orchestration", width: "80%" },
+    ],
+  },
+  {
+    title: "AI & Neural Engineering",
+    icon: "fa-brain",
+    skills: [
+      { name: "Python (ML Core)", width: "55%" },
+      { name: "C++ (HPC & Performance)", width: "35%" },
+      { name: "CUDA (GPU Acceleration)", width: "25%" },
+      { name: "Neural Architectures", width: "30%" },
+    ],
+  },
 ];
 
 export default function Skills() {

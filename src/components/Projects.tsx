@@ -2,12 +2,18 @@
 
 import Image from "next/image";
 
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 const projects = [
   {
     title: "SijanList",
     status: "Active",
-    description: "A modern utility platform and browser extension for efficient digital content management. Features real-time sync and structured backend.",
-    tags: ["JavaScript", "Supabase", "Extension APIs"],
+    link: "https://sijanlist.pro.bd/",
+    description: "A professional bookmark dashboard that transforms your Chrome New Tab into a high-performance productivity hub.",
+    details: "SijanList is a privacy-first Chromium extension built for power users. It features a stunning glassmorphism UI, customizable boards, and multiple tab pages (Home, Work, Personal). With zero tracking and offline capability, it's the fastest way to organize your digital life.",
+    features: ["Custom Boards", "Privacy Blur Mode", "Multiple Tab Pages", "Glass UI", "Offline Mode"],
+    tags: ["Vanilla JS", "Extension APIs", "Productivity"],
     featured: true,
   },
   {
@@ -19,7 +25,7 @@ const projects = [
   },
   {
     title: "RexiO AI Companion",
-    status: "Active",
+    status: "Coming Soon",
     description: "Bangladesh-local AI companion with multi-agent system. Features voice interaction and personalized neural memory.",
     tags: ["AI", "Python", "NLP"],
     featured: false,
@@ -33,7 +39,7 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+export default function Projects({ onSelectProject }: { onSelectProject: (p: any) => void }) {
   return (
     <section id="projects">
       <h2 className="section-title">Notable Projects</h2>
@@ -56,14 +62,27 @@ export default function Projects() {
                   <span key={tag} className="tech-tag">{tag}</span>
                 ))}
               </div>
-              {project.title === "FZS Sports" && (
-                <div className="project-features-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", fontSize: "0.75rem", color: "var(--text-muted)", marginTop: "1rem" }}>
-                  <div><i className="fas fa-id-card" style={{ color: "var(--accent-cyan)", marginRight: "8px" }} /> Player Stats</div>
-                  <div><i className="fas fa-trophy" style={{ color: "var(--accent-cyan)", marginRight: "8px" }} /> Tournaments</div>
-                  <div><i className="fas fa-users" style={{ color: "var(--accent-cyan)", marginRight: "8px" }} /> Community</div>
-                  <div><i className="fas fa-bolt" style={{ color: "var(--accent-cyan)", marginRight: "8px" }} /> Real-time</div>
-                </div>
-              )}
+
+              <div className="project-actions" style={{ marginTop: "1.5rem", display: "flex", gap: "1rem" }}>
+                <button 
+                  onClick={() => onSelectProject(project)}
+                  className="btn btn-outline" 
+                  style={{ padding: "0.5rem 1rem", fontSize: "0.8rem" }}
+                >
+                  <i className="fas fa-info-circle" /> Details
+                </button>
+                {project.link && (
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn btn-primary" 
+                    style={{ padding: "0.5rem 1rem", fontSize: "0.8rem" }}
+                  >
+                    <i className="fas fa-external-link-alt" /> Visit
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
