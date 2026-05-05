@@ -337,12 +337,16 @@ nav {
 
 /* Buttons */
 .btn-outline {
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--glass-border);
   color: var(--text-main);
 }
+
 .btn-outline:hover {
-  background: var(--glass-bg);
+  background: rgba(255, 255, 255, 0.05);
   border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
 }
 
 /* ============================================================
@@ -419,9 +423,17 @@ section.visible {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid transparent;
   gap: 0.5rem;
+  background: transparent;
+  outline: none;
+  font-family: var(--font-main);
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
 }
 
 .btn-primary {

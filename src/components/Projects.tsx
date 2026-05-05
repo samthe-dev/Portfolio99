@@ -66,8 +66,7 @@ export default function Projects({ onSelectProject }: { onSelectProject: (p: any
               <div className="project-actions" style={{ marginTop: "1.5rem", display: "flex", gap: "1rem" }}>
                 <button 
                   onClick={() => onSelectProject(project)}
-                  className="btn btn-outline" 
-                  style={{ padding: "0.5rem 1rem", fontSize: "0.8rem" }}
+                  className="btn btn-outline btn-sm" 
                 >
                   <i className="fas fa-info-circle" /> Details
                 </button>
@@ -76,8 +75,7 @@ export default function Projects({ onSelectProject }: { onSelectProject: (p: any
                     href={project.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn btn-primary" 
-                    style={{ padding: "0.5rem 1rem", fontSize: "0.8rem" }}
+                    className="btn btn-primary btn-sm" 
                   >
                     <i className="fas fa-external-link-alt" /> Visit
                   </a>
