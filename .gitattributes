@@ -1,0 +1,14 @@
+# Tell GitHub to treat these files as documentation or generated
+# This hides them from the language statistics bar
+
+*.html linguist-documentation=true
+*.css linguist-documentation=true
+*.svg linguist-documentation=true
+
+# Force specific languages to be recognized
+Do-Not-Check-This-Folder/*.py linguist-language=Python
+Do-Not-Check-This-Folder/*.java linguist-language=Java
+Do-Not-Check-This-Folder/*.cpp linguist-language=C++
+Do-Not-Check-This-Folder/*.rs linguist-language=Rust
+Do-Not-Check-This-Folder/*.cu linguist-language=CUDA
+Do-Not-Check-This-Folder/*.asm linguist-language=Assembly
