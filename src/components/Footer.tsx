@@ -4,6 +4,7 @@ export default function Footer() {
       <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
         © {new Date().getFullYear()} Mohammad Sijan. All rights reserved.
       </p>
+      {/* 
       <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", marginTop: "1rem" }}>
         <a href="https://github.com/Seizmann" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-muted)", fontSize: "1.5rem", transition: "color 0.3s" }}>
           <i className="fab fa-github" />
@@ -15,6 +16,7 @@ export default function Footer() {
           <i className="fab fa-instagram" />
         </a>
       </div>
+      */}
     </footer>
   );
 }
